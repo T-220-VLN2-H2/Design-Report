@@ -1,7 +1,86 @@
 \section{Programming Rules}
 
+In this section we describe code conventions, tooling and coding workflow we intend to use for FireSale!\\
+
+\noindent
+For version control we are using git, hosting the repo on GitHub, the repos \textit{main} branch is write protected to ensure proper workflow through Pull Requests (PRs). We also utilise \textit{.gitignore} to keep unwanted file out of the repo.\\
+
+\noindent
+To help us keep the code-bases' indents, newlines and encoding consistent across the multiple filetypes and operating systems we use \href{https://editorconfig.org}{\textit{editorconfig}}.\\
+
+\noindent The UTF-8 encoding and UNIX newlines are used for all files unless otherwise specified.
+
+\subsection{Linting}
+All PRs merged with the main branch will automatically be linted for code consistency, this is done either manually or with CI if we find time to set it up.
+
+\subsection{Comments}
+Through out the code we comment all functions and classes with some form of doc strings containing a description of what the function does along with listing of parameters and expected output.\\
+
+\noindent
+Inline comments should have two full spaces before and one after the comment symbol/s followed by a short and concise comment.\\
+
+\noindent
+If someone ever notices a bug but for what ever reason can´t deal with at that time, comment 'FIXME: <short description or link to Asana>'. For functionality yet to be implemented we'll comment 'TODO: <short description or link to Asana>', this makes searching for found bugs and missing functionality easier.\\
+
+\subsection{Directory Structure}
+
+\dirtree{%
+    .1 FireSale!.
+    .2 .github.
+    .3 <ci>.
+    .2 docs.
+    .3 diagrams.
+    .4 <plantUML diagrams>.
+    .2 FireSale!.
+    .3 <django project files>.
+    .2 db.
+    .3 <src>.
+    .2 tests.
+    .2 .editorcofnig.
+    .2 .gitignore.
+    .2 README.md.
+}
+
+\subsection{CSS}
+Our CSS code conventions are quite straight forward, everything in a block should be lowercase, use four space soft tab for indenting, and leave a single empty line between blocks.
+
+\subsection{HTML}
+HTML files we have more points to consider than for CSS.
+
+\begin{itemize}
+	\item all tags and attributes should be in lowercase
+	\item opened tags need to be closed
+	\item no space around = in attribute assignment
+	\item attribute values encased in double quotes
+	\item images have alt, width and height defined
+	\item \textbf{no inline css or js!}
+\end{itemize}
+
 \subsection{Java Script}
+JavaScript is probably has the wildest style guides out there, but we decided to follow googles JS style guide even if it's a long winded read.
+\begin{itemize}
+	\item sum google style
+	\item % TODO: sum googles js code style
+	\item eval evil
+\end{itemize}
 
 \subsection{Python}
+For Python we plan on following \href{https://peps.python.org/pep-0008/}{PEP8} as closely one finds reasonable.\\
+
+\noindent
+To give a brief summery on PEP8:
+\begin{itemize}
+    \item variables and functions are named in snake\_case
+    \item space between all operators
+    \item space after a ', ' not before
+    \item leave two empty lines between functions and/or classes, but one line between functions in the same class
+    \item all functions and classes should have a docstring summarising their inner workings, parameters, and return values
+    \item when defining a function use typing where it applies
+\end{itemize}
 
 \subsection{SQL}
+% TODO: write small intro
+\begin{itemize}
+    \item keywords in lowercase
+    \item indents should create a 'river' down the length of each given query, between keywords and parameters
+\end{itemize}
