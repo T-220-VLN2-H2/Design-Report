@@ -1,9 +1,12 @@
 \documentclass{scrartcl}
-\input{File_Setup.tex}
-\usepackage[table,xcdraw]{xcolor}
+%\usepackage{aeguill}
+\usepackage{tikz}
+\usepackage[table,xcdraw]{}
 \usepackage{float}
 \usepackage{multicol, caption}
 \usepackage{dirtree}
+\input{File_Setup.tex}
+
 \setlength\parindent{0pt} % remove need for \noindent
 % page numbering
 \pagestyle{plain}
@@ -61,14 +64,18 @@
 
 \include{Sections/user-testing}
 
-\include{Sections/class}
+\include{Sections/classdiagram}
 
-\include{Sections/navigation}
+\include{Sections/statediagram}
+
+\include{Sections/navigation_diagram}
+
+\include{Sections/flowchart}
 
 \include{Sections/programming-rules}
 
-\include{Sections/conclusion}
+\include{Sections/next-steps-changes}
 
-\include{Sections/appendix}
+\include{Sections/conclusion}
 
 \end{document}

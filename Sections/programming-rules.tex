@@ -1,5 +1,4 @@
-\section{Programming Rules}
-
+\section{Code style guide}
 In this section we describe code conventions, tooling and coding workflow we intend to use for FireSale!. To start off this section uses \href{https://datatracker.ietf.org/doc/html/rfc2119}{RFC 2119} 
 terms when using the phrases: \textit{must}, \textit{must not}, \textit{required}, \textit{shall}, \textit{shall not}, \textit{should}, \textit{should not}, \textit{recommended}, \textit{may}, \& \textit{optional}.\\
  
@@ -80,10 +79,12 @@ To give a brief summery on PEP8:
 \end{itemize}
 
 \subsection{SQL}
-Despite SQL not having many points in our code style it's probably has the strangest.
+Despite SQL not having many points in our code style it probably has the strangest.
 
 \begin{itemize}
     \item keywords in lowercase
     \item indents should create a 'river' down the length of each given query, between keywords and parameters
-    \item indent subqueries should be indented based on how far in the subquerie starts
+    \item indent subqueries should be indented based on how far in the subquery starts
 \end{itemize}
+
+We do not expect a large portion of our codebase to be hand-crafted SQL queries but nevertheless we felt it important to at least mention some guide.
